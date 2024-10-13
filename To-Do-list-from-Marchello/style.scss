@@ -1,0 +1,314 @@
+@mixin FlexElement($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+  
+@mixin ForBlocks ($justify) {
+    display: flex;
+    justify-content: $justify;
+}
+
+body {
+    @include FlexElement(center, center);
+    column-gap: 24px;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(117deg, #00FFB7 0%, #EF0 100%);
+}
+
+.section1 {
+    &_logoBlock {
+        @include FlexElement(center, center);
+        width: 294px;
+        height: 71px;
+        background: rgba(0, 0, 0, 0.50);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 10px;
+        &_logoElements {
+            width: 190px;
+            height: 46px;
+            &_titleText {
+                color: #FFF;
+                font-family: "Overpass Mono";
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+            &_nameText {
+                color: #FFF;
+                font-family: "Overpass Mono";
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+    }
+    &_inputBlock {
+        @include FlexElement(center, center);
+        width: 294px;
+        height: 327px;   
+        background: rgba(0, 0, 0, 0.50);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 10px;
+        margin-top: 10px;    
+        &_inputElements {
+            width: 270px;
+            height: 300px;
+            &_nameTitle {
+                color: #FFF;
+                font-family: "Overpass Mono";
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;           
+            }
+            &_nameInput {
+                width: 265px;
+                height: 25px;
+                border-radius: 2px;
+                border: none;
+                outline:none;
+                font-family: "Overpass Mono";             
+            }
+            &_textTitle {
+                margin-top: 8px;
+                color: #FFF;
+                font-family: "Overpass Mono";
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;           
+            }
+            &_textInput {
+                width: 265px;
+                height: 115px;
+                border-radius: 2px;
+                border: none;
+                outline:none;
+                font-family: "Overpass Mono";             
+            }
+            &_tagsTitle {
+                margin-top: 8px;
+                color: #FFF;
+                font-family: "Overpass Mono";
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;           
+            }
+            &_tagsInput {
+                width: 265px;
+                height: 25px;
+                border-radius: 2px;
+                border: none;
+                outline:none;
+                font-family: "Overpass Mono";             
+            }
+            &_buttonCreate {
+                width: 269px;
+                height: 31px;           
+                border-radius: 2px;
+                background: #ffffff;
+                color: #000000;
+                font-family: "Overpass Mono";
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                border: none;
+                transition-duration: 0.6s;
+                cursor: pointer;
+                margin-top: 20px;
+                &:hover {
+                    background: #12A921;
+                    color: #ffffff;
+                    transition-duration: 0.6s;
+                }
+            }
+        }
+    }
+}
+
+.section2 {
+    width: 330px;
+    height: 745px;
+    background: rgba(0, 0, 0, 0.50);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    overflow-y: scroll;
+    &_titleBlock {
+        @include FlexElement(center, center);
+        width: 315px;
+        height: 67px;
+        background: rgba(0, 0, 0, 0.50);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 10px 0px 0px 10px;
+        &_titleText {
+            color: #FFF;
+            font-family: "Overpass Mono";
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+    &_flexBlock {
+        @include ForBlocks(center);
+        &_listBlock {
+            margin-top: 10px;
+            width: 280px;
+            height: 247px;
+            border-radius: 10px;
+            background: #FFEA98;
+            &_flexTexts {
+                @include ForBlocks(center);
+                &_listElements {
+                    width: 260px;
+                    height: 150px;
+                    margin-top: 8px;
+                    &_nameList {
+                        color: #000;
+                        font-family: "Overpass Mono";
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                    &_nameText {
+                        color: #000;
+                        font-family: "Overpass Mono";
+                        font-size: 25px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;             
+                    }
+                    &_textList {
+                        color: #000;
+                        font-family: "Overpass Mono";
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                    &_text {
+                        color: #000;
+                        font-family: "Overpass Mono";
+                        font-size: 25px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;             
+                    }
+                    &_tagList {
+                        color: #000;
+                        font-family: "Overpass Mono";
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                    &_tagText {
+                        color: #000;
+                        font-family: "Overpass Mono";
+                        font-size: 25px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;             
+                    }
+                }
+            }
+        }
+        &_buttonDelete {
+            width: 280px;
+            height: 37px;        
+            background: #ffffff;
+            color: #000000;
+            font-family: "Overpass Mono";
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            border: none;
+            transition-duration: 0.6s;
+            cursor: pointer;
+            margin-top: 15px;
+            &:hover {
+                background: #C20000;
+                color: #ffffff;
+                transition-duration: 0.6s;
+            } 
+        }
+        &_buttonNext {
+            width: 280px;
+            height: 37px;        
+            border-radius: 0px 0px 10px 10px;
+            background: #ffffff;
+            color: #000000;
+            font-family: "Overpass Mono";
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            border: none;
+            transition-duration: 0.6s;
+            cursor: pointer;
+            &:hover {
+                background: #12A921;
+                color: #ffffff;
+                transition-duration: 0.6s;
+            }
+        }
+    }
+}
+
+.section3 {
+    width: 330px;
+    height: 745px;
+    background: rgba(0, 0, 0, 0.50);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    overflow-y: scroll;
+    &_titleBlock {
+        @include FlexElement(center, center);
+        width: 315px;
+        height: 67px;
+        background: rgba(0, 0, 0, 0.50);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 10px 0px 0px 10px;
+        &_titleText {
+            color: #FFF;
+            font-family: "Overpass Mono";
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+}
+
+.section4 {
+    width: 330px;
+    height: 745px;
+    background: rgba(0, 0, 0, 0.50);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    overflow-y: scroll;
+    &_titleBlock {
+        @include FlexElement(center, center);
+        width: 315px;
+        height: 67px;
+        background: rgba(0, 0, 0, 0.50);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 10px 0px 0px 10px;
+        &_titleText {
+            color: #FFF;
+            font-family: "Overpass Mono";
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+}

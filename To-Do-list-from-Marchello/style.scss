@@ -17,6 +17,14 @@ body {
     background: linear-gradient(117deg, #00FFB7 0%, #EF0 100%);
 }
 
+.pnotify {
+    font-family: "Overpass Mono";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 .section1 {
     &_logoBlock {
         @include FlexElement(center, center);

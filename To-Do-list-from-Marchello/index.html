@@ -32,46 +32,33 @@
       </div>
       <div class="section1_inputBlock">
         <div class="section1_inputBlock_inputElements">
-          <p class="section1_inputBlock_inputElements_nameTitle">Name list:</p>
-          <input class="section1_inputBlock_inputElements_nameInput" type="text">
-          <p class="section1_inputBlock_inputElements_textTitle">Text list:</p>
-          <textarea  class="section1_inputBlock_inputElements_textInput"></textarea>
-          <p class="section1_inputBlock_inputElements_tagsTitle">Tags list:</p>
-          <input class="section1_inputBlock_inputElements_tagsInput" type="text">
-          <button class="section1_inputBlock_inputElements_buttonCreate">Create</button>
+          <p class="section1_inputBlock_inputElements_nameTitle">Name note:</p>
+          <input id="nameInput" class="section1_inputBlock_inputElements_nameInput" type="text">
+          <p class="section1_inputBlock_inputElements_textTitle">Text note:</p>
+          <textarea id="textinput"  class="section1_inputBlock_inputElements_textInput"></textarea>
+          <p class="section1_inputBlock_inputElements_tagsTitle">Tags note:</p>
+          <input id="tagsInput" class="section1_inputBlock_inputElements_tagsInput" type="text">
+          <button id="buttonCreate" class="section1_inputBlock_inputElements_buttonCreate">Create</button>
         </div>
       </div>
     </div>
-    <div class="section2">
+    <div id="section2" class="section2">
       <div class="section2_titleBlock">
         <p class="section2_titleBlock_titleText">To-do:</p>
       </div>
-      <div class="section2_flexBlock">
-        <div class="section2_flexBlock_listBlock">
-          <div class="section2_flexBlock_listBlock_flexTexts">
-            <div class="section2_flexBlock_listBlock_flexTexts_listElements">
-              <p class="section2_flexBlock_listBlock_flexTexts_listElements_nameList">Name list:</p>
-              <p class="section2_flexBlock_listBlock_flexTexts_listElements_nameText">Homework</p>
-              <p class="section2_flexBlock_listBlock_flexTexts_listElements_textList">Text list:</p>
-              <p class="section2_flexBlock_listBlock_flexTexts_listElements_text">Lorem ipsum</p>
-              <p class="section2_flexBlock_listBlock_flexTexts_listElements_tagList">Tag:</p>
-              <p class="section2_flexBlock_listBlock_flexTexts_listElements_tagText">School</p>
-            </div>
-          </div>
-          <button class="section2_flexBlock_buttonDelete">Delete</button>
-          <button class="section2_flexBlock_buttonNext">Next</button>
-        </div>
-      </div>
+      <div id="renderListsBlock"></div>
     </div>
     <div class="section3">
       <div class="section3_titleBlock">
         <p class="section3_titleBlock_titleText">In progress:</p>
       </div>
+      <div id="renderListsBlock2"></div>
     </div>
     <div class="section4">
       <div class="section4_titleBlock">
         <p class="section4_titleBlock_titleText">Done:</p>
       </div>
+      <div id="renderListsBlock3"></div>
     </div>
     <script type="module" src="/main.js"></script>
   </body>
